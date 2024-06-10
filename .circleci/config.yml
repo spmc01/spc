@@ -1,15 +1,18 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/app
+    
     docker:
       - image: cimg/base:2022.09
     parallelism: 20
     steps:
       - checkout
       - setup_remote_docker:
-
+          docker_layer_caching: true
+ 
       - run:
-          name: Run tests
+          name: Build Docker image
           command: |
+            
             docker build -t app . --progress=plain
+      
